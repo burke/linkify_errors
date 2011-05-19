@@ -22,6 +22,8 @@ LinkifyErrors is a really ugly hack to turn your in-browser Rails backtraces int
 
     $(echo $@ | sed 's/ /\\ /g' | sed 's/^\([0-9]*\)\@\(.*\)$/mate -l\1 \2/')
 
+5. Bask in the glory of hyperlinked backtraces.
+
 == Is this secure?
 
 No. Don't use it. A puppy will die.
