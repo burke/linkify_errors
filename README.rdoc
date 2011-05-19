@@ -1,0 +1,28 @@
+== LinkifyErrors
+
+LinkifyErrors is a really ugly hack to turn your in-browser Rails backtraces into clickable links that open in your editor. Each line is turned into a link that, when clicked, opens your editor to that file and line immediately.
+
+== Requirements
+
+1. Rails 3.1
+
+2. OS X
+
+== Installation
+
+1. Add the linkify_errors gem to your Rails 3.1 Gemfile
+
+    gem "linkify_errors"
+
+2. Download the {helper application}[https://github.com/downloads/burke/linkify_errors/EditFile.dmg] and install it.
+
+3. Download {More Internet}[http://www.monkeyfood.com/software/moreInternet/] and install it. Open the PrefPane, and create a new protocol called "editfile". Drag your new "EditFile" application onto the box to choose it as the helper for this new editfile protocol.
+
+4. The application is set up by default to use emacsclient. You can edit "/Applications/EditFile.app/editfile" to change this. It's a shell script that gets called with "123@/Users/name/path/to/file". Do whatever you want within. The example below might work for textmate
+
+    $(echo $@ | sed 's/ /\\ /g' | sed 's/^\([0-9]*\)\@\(.*\)$/mate -l\1 \2/')
+
+== Is this secure?
+
+No. Don't use it. A puppy will die.
+
