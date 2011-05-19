@@ -2,6 +2,8 @@
 
 LinkifyErrors is a really ugly hack to turn your in-browser Rails backtraces into clickable links that open in your editor. Each line is turned into a link that, when clicked, opens your editor to that file and line immediately.
 
+The {14 second video demo}[http://www.youtube.com/watch?v=d5Q_bK9x7U0] does a better job explaining than this README.
+
 == Requirements
 
 1. Rails 3.1
